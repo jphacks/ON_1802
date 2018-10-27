@@ -1,0 +1,34 @@
+[I 21:21:58.994 NotebookApp] The port 8888 is already in use, trying another port.
+[I 21:21:59.015 NotebookApp] Serving notebooks from local directory: /Users/kagari/jphacks/notes
+[I 21:21:59.015 NotebookApp] The Jupyter Notebook is running at:
+[I 21:21:59.015 NotebookApp] http://localhost:8889/?token=98112a2eaee9663341038a48d230195b1931eecfcbca8546
+[I 21:21:59.015 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 21:21:59.041 NotebookApp] 
+    
+    Copy/paste this URL into your browser when you connect for the first time,
+    to login with a token:
+        http://localhost:8889/?token=98112a2eaee9663341038a48d230195b1931eecfcbca8546
+[I 21:21:59.706 NotebookApp] Accepting one-time-token-authenticated connection from ::1
+[I 21:22:13.199 NotebookApp] Creating new notebook in 
+[I 21:22:15.154 NotebookApp] Kernel started: ef86f1b7-2c8b-45cd-adae-f39941ceea5a
+[I 21:22:16.862 NotebookApp] Adapting to protocol v5.1 for kernel ef86f1b7-2c8b-45cd-adae-f39941ceea5a
+[I 21:24:14.932 NotebookApp] Saving file at /Untitled.ipynb
+[I 21:26:14.939 NotebookApp] Saving file at /Untitled.ipynb
+[I 21:28:14.941 NotebookApp] Saving file at /Untitled.ipynb
+[I 21:30:14.928 NotebookApp] Saving file at /Untitled.ipynb
+[I 21:32:14.938 NotebookApp] Saving file at /Untitled.ipynb
+[I 21:34:15.304 NotebookApp] Saving file at /Untitled.ipynb
+[I 21:36:18.121 NotebookApp] Saving file at /Untitled.ipynb
+[I 21:40:15.312 NotebookApp] Saving file at /Untitled.ipynb
+[I 21:46:15.312 NotebookApp] Saving file at /Untitled.ipynb
+[I 21:48:15.306 NotebookApp] Saving file at /Untitled.ipynb
+[I 21:52:15.935 NotebookApp] Saving file at /Untitled.ipynb
+[I 22:00:15.949 NotebookApp] Saving file at /Untitled.ipynb
+[I 22:02:15.332 NotebookApp] Saving file at /Untitled.ipynb
+[I 22:06:15.901 NotebookApp] Saving file at /Untitled.ipynb
+[I 22:28:15.345 NotebookApp] Saving file at /Untitled.ipynb
+[I 22:30:15.337 NotebookApp] Saving file at /Untitled.ipynb
+[I 22:32:15.339 NotebookApp] Saving file at /Untitled.ipynb
+[I 22:34:15.342 NotebookApp] Saving file at /Untitled.ipynb
+[I 22:36:15.355 NotebookApp] Saving file at /Untitled.ipynb
+[I 22:38:15.395 NotebookApp] Saving file at /Untitled.ipynb
