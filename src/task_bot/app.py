@@ -44,6 +44,18 @@ def handle_message(event):
         event.reply_token,
         TextSendMessage(text=event.message.text))
 
+    if message == 'タスク追加':
+        line_bot_api.reply_message(
+        event.reply_token,
+        TextSendMessage(text='タスクを追加しました'))
+    elif message == 'タスク完了':
+        line_bot_api.reply_message(
+        event.reply_token,
+        TextSendMessage(text='タスクを完了しました'))
+    elif message == 'タスク一覧':
+        line_bot_api.reply_message(
+        event.reply_token,
+        TextSendMessage(text='タスク一覧です'))
 
 if __name__ == "__main__":
     port = int(os.getenv("PORT", 5000))
