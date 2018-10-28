@@ -49,16 +49,39 @@ def handle_message(event):
     #     TextSendMessage(text=event.message.text))
 
     if event.message.text == 'タスク追加':
-        print ('タスク追加')
+        # POST
+
+        #追加完了メッセージ
+        message = [
+            TextSendMessage(text='洗濯を追加'),
+            TextSendMessage(text='タスクを追加しました')
+        ]
+
         line_bot_api.reply_message(
-            event.reply_token,TextSendMessage(text='タスクを追加しました')
+            event.reply_token,message
         )
     elif event.message.text == 'タスク完了':
+        #DELETE
+        
+        #追加完了メッセージ
+        message = [
+            TextSendMessage(text='洗濯を完了しました')
+        ]
+
         line_bot_api.reply_message(
-            event.reply_token,
-            [
-                TextSendMessage(text = 'タスクを完了しました')
-            ]
+            event.reply_token,message
+        )
+    elif event.message.text == 'タスク一覧':
+        #GET
+
+        #一覧メッセージ
+        message = [
+            TextSendMessage(text='タスク一覧です'),
+            
+        ]
+
+        line_bot_api.reply_message(
+            event.reply_token,message
         )
 
 if __name__ == "__main__":
