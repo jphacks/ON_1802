@@ -32,3 +32,42 @@
 [I 22:34:15.342 NotebookApp] Saving file at /Untitled.ipynb
 [I 22:36:15.355 NotebookApp] Saving file at /Untitled.ipynb
 [I 22:38:15.395 NotebookApp] Saving file at /Untitled.ipynb
+[I 00:30:12.863 NotebookApp] The port 8888 is already in use, trying another port.
+[I 00:30:12.875 NotebookApp] Serving notebooks from local directory: /Users/kagari/jphacks/notes
+[I 00:30:12.875 NotebookApp] The Jupyter Notebook is running at:
+[I 00:30:12.875 NotebookApp] http://localhost:8889/?token=2a08e7a75724b18987c5f33672c78e179826096beb9bea14
+[I 00:30:12.875 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 00:30:12.890 NotebookApp] 
+    
+    Copy/paste this URL into your browser when you connect for the first time,
+    to login with a token:
+        http://localhost:8889/?token=2a08e7a75724b18987c5f33672c78e179826096beb9bea14
+[I 00:30:13.341 NotebookApp] Accepting one-time-token-authenticated connection from ::1
+[I 00:34:24.827 NotebookApp] Kernel started: d8427661-9c1f-48b6-8f0d-6e3f2603eaaa
+[I 00:34:26.081 NotebookApp] Adapting to protocol v5.1 for kernel d8427661-9c1f-48b6-8f0d-6e3f2603eaaa
+[I 00:36:24.775 NotebookApp] Saving file at /practice_pandas.ipynb
+[I 00:38:24.774 NotebookApp] Saving file at /practice_pandas.ipynb
+[I 00:40:24.779 NotebookApp] Saving file at /practice_pandas.ipynb
+[I 00:44:24.780 NotebookApp] Saving file at /practice_pandas.ipynb
+[I 00:46:24.781 NotebookApp] Saving file at /practice_pandas.ipynb
+[I 00:48:24.786 NotebookApp] Saving file at /practice_pandas.ipynb
+[I 00:52:26.015 NotebookApp] Saving file at /practice_pandas.ipynb
+[I 00:54:25.755 NotebookApp] Saving file at /practice_pandas.ipynb
+[I 00:56:24.792 NotebookApp] Saving file at /practice_pandas.ipynb
+[I 00:58:25.049 NotebookApp] Saving file at /practice_pandas.ipynb
+[I 01:00:24.797 NotebookApp] Saving file at /practice_pandas.ipynb
+[I 01:02:24.793 NotebookApp] Saving file at /practice_pandas.ipynb
+[I 01:04:24.804 NotebookApp] Saving file at /practice_pandas.ipynb
+[I 01:06:24.801 NotebookApp] Saving file at /practice_pandas.ipynb
+[I 01:09:22.770 NotebookApp] Saving file at /practice_pandas.ipynb
+[I 08:49:42.345 NotebookApp] Saving file at /practice_pandas.ipynb
+[I 08:49:44.161 NotebookApp] Starting buffering for d8427661-9c1f-48b6-8f0d-6e3f2603eaaa:9561fc1c973744e98d91f7d393cb1ca3
+[I 08:49:48.379 NotebookApp] Creating new notebook in 
+[I 08:49:49.257 NotebookApp] Kernel started: 21778740-9668-48a7-9dc7-7ba944a62274
+[I 08:49:50.558 NotebookApp] Adapting to protocol v5.1 for kernel 21778740-9668-48a7-9dc7-7ba944a62274
+[I 08:51:21.239 NotebookApp] Adapting to protocol v5.1 for kernel d8427661-9c1f-48b6-8f0d-6e3f2603eaaa
+[I 08:51:49.256 NotebookApp] Saving file at /learn_pandas_json.ipynb
+[I 08:53:49.683 NotebookApp] Saving file at /learn_pandas_json.ipynb
+[I 08:55:49.770 NotebookApp] Saving file at /learn_pandas_json.ipynb
+[I 08:57:49.859 NotebookApp] Saving file at /learn_pandas_json.ipynb
+[I 08:59:45.883 NotebookApp] Saving file at /practice_pandas.ipynb

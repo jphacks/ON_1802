@@ -1,2 +1,2 @@
-,user_id,task_name,task_info,time_limit
-0,1,洗濯物をたたむ,洗濯物が溜まってきたのでそろそろ畳まないといけない,"{'year': 2018, 'month': 10, 'date': 18}"
+user_id,task_name,task_info,time_limit
+1,洗濯物をたたむ,洗濯物が溜まってきたのでそろそろ畳まないといけない,"{'year': 2018, 'month': 10, 'date': 18}"

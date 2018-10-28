@@ -7,12 +7,12 @@ def _change_dict_for_pandas(task_dict):
 
     return task_dict
 
-def data_to_csv(dict):
+def data_to_json(dict):
 
-    file_name = str(dict['user_id']) + '.csv'
+    file_name = str(dict['user_id']) + '.json'
     task_dict = _change_dict_for_pandas(dict)
     df = pd.DataFrame(task_dict)
-    df.to_csv(file_name)
+    df.to_json(file_name)
 
     return 0
 
@@ -24,4 +24,4 @@ if __name__ == '__main__':
         'time_limit' : {'year':2018, 'month':10, 'date':18}
     }
     
-    data_to_csv(task_dict)
+    data_to_json(task_dict)
