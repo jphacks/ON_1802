@@ -69,6 +69,26 @@ def handle_message(event):
         #         'time_limit' : {'year':2018, 'month':10, 'date':18}
         #     }
         # )
+
+        url = "https://04f7bfe9.ngrok.io/tasks/jafkl23kh45l"
+        method = "POST"
+        headers = {"Content-Type" : "application/json"}
+
+        # PythonオブジェクトをJSONに変換する
+        obj = {
+            'user_id' : "jafkl23kh45l",
+            'task_name' : addObj.group(1),
+            'task_info' : '洗濯物が溜まってきたのでそろそろ畳まないといけない',
+            'time_limit' : {'year':2018, 'month':10, 'date':18}
+            }
+
+        json_data = json.dumps(obj).encode("utf-8")
+
+        # httpリクエストを準備してPOST
+        request = urllib.request.Request(url, data=json_data, method=method, headers=headers)
+        with urllib.request.urlopen(request) as response:
+            response_body = response.read().decode("utf-8")
+
         #追加完了メッセージ
         message = [
             TextSendMessage(text=addObj.group(1) + 'を追加'),
@@ -83,8 +103,24 @@ def handle_message(event):
         #line_bot_api.reply_message(event.reply_token,message=TextSendMessage(text='どのタスクを完了しますか？'))
 
         #DELETE
+        url = "http://04f7bfe9.ngrok.io/tasks/jafkl23kh45l"
 
-        #追加完了メッセージ
+        method = "DELETE"
+        headers = {"Content-Type" : "application/json"}
+
+        obj = {
+            'user_id' : "jafkl23kh45l",
+            'task_name' : doneObj.group(1),
+            }
+
+        json_data = json.dumps(obj).encode("utf-8")
+
+        # httpリクエストを準備してPOST
+        request = urllib.request.Request(url, data=json_data, method=method, headers=headers)
+        with urllib.request.urlopen(request) as response:
+            response_body = response.read().decode("utf-8")
+
+        # 削除完了メッセージ
         message = [
             TextSendMessage(text=doneObj.group(1)+'を完了しました')
         ]
