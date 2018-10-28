@@ -1,0 +1,35 @@
+# POST
+
+{
+  'user_id' : "jafkl23kh45l",
+  'task_name' : '洗濯物をたたむ',
+  'task_info' : '洗濯物が溜まってきたのでそろそろ畳まないといけない',
+  'time_limit' : {'year':2018, 'month':10, 'date':18}
+}
+
+
+# GET
+
+{
+  tasks:[
+    {
+      'user_id' : "jafkl23kh45l",
+      'task_name' : '洗濯物をたたむ',
+      'task_info' : '洗濯物が溜まってきたのでそろそろ畳まないといけない',
+      'time_limit' : {'year':2018, 'month':10, 'date':18}
+    },
+    {
+      'user_id' : "jafkl23kh45l",
+      'task_name' : '洗濯物',
+      'task_info' : '洗濯物が....',
+      'time_limit' : {'year':2018, 'month':10, 'date':18}
+    }
+  ]
+}
+
+# DELETE
+
+{
+  'user_id' : "jafkl23kh45l",
+  'task_name' : '洗濯物をたたむ'
+}
