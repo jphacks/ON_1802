@@ -11,6 +11,10 @@ from linebot.models import (
     MessageEvent, TextMessage, TextSendMessage,
 )
 
+import json
+
+import re
+
 app = Flask(__name__)
 
 # 環境変数取得
@@ -48,19 +52,38 @@ def handle_message(event):
     #     event.reply_token,
     #     TextSendMessage(text=event.message.text))
 
-    if event.message.text == 'タスク追加':
-        # POST
+    addpattern = re.compile(r'(.*)のタスク追加')
+    addmatchObj = addpattern.findall(event.message.text)
 
+    donepattern = re.compile(r'(.*)のタスク完了')
+    donematchObj = donepattern.findall(event.message.text)
+
+    print(event.message.text)
+
+    if addmatchObj:
+        print("match")
+        # POST
+        # postjson=json.dumps(
+        #     {
+        #         'user_id' : "jafkl23kh45l",
+        #         'task_name' : addmatchObj[0][0],
+        #         'task_info' : '洗濯物が溜まってきたのでそろそろ畳まないといけない',
+        #         'time_limit' : {'year':2018, 'month':10, 'date':18}
+        #     }
+        # )
         #追加完了メッセージ
         message = [
-            TextSendMessage(text='洗濯を追加'),
+            TextSendMessage(text=addmatchObj[0][0] + 'を追加'),
             TextSendMessage(text='タスクを追加しました')
         ]
 
         line_bot_api.reply_message(
             event.reply_token,message
         )
-    elif event.message.text == 'タスク完了':
+    elif donematchObj:
+        #この処理は省略→#どのタスクを完了するか確認
+        #line_bot_api.reply_message(event.reply_token,message=TextSendMessage(text='どのタスクを完了しますか？'))
+        
         #DELETE
         
         #追加完了メッセージ
@@ -77,12 +100,15 @@ def handle_message(event):
         #一覧メッセージ
         message = [
             TextSendMessage(text='タスク一覧です'),
-            
+
         ]
 
         line_bot_api.reply_message(
             event.reply_token,message
         )
+    
+    else:
+        print("not match")
 
 if __name__ == "__main__":
     port = int(os.getenv("PORT", 5000))
