@@ -12,7 +12,7 @@ from linebot.models import (
 )
 
 import json
-
+import urllib.request
 import re
 
 app = Flask(__name__)
@@ -52,14 +52,14 @@ def handle_message(event):
     #     event.reply_token,
     #     TextSendMessage(text=event.message.text))
 
-    addObj = re.search(r'(.*)のタスク追加')
+    addObj = re.search(r'(.*)のタスク追加', event.message.text)
 
-    doneObj = re.search(r'(.*)のタスク完了')
+    doneObj = re.search(r'(.*)のタスク完了', event.message.text)
 
-    print(event.message.text)
+    # print(event.message.text)
 
     if addObj:
-        print("match")
+        # print("match")
         # POST
         # postjson=json.dumps(
         #     {
@@ -81,12 +81,12 @@ def handle_message(event):
     elif doneObj:
         #この処理は省略→#どのタスクを完了するか確認
         #line_bot_api.reply_message(event.reply_token,message=TextSendMessage(text='どのタスクを完了しますか？'))
-        
+
         #DELETE
-        
+
         #追加完了メッセージ
         message = [
-            TextSendMessage(text=doneObj.group(1)'を完了しました')
+            TextSendMessage(text=doneObj.group(1)+'を完了しました')
         ]
 
         line_bot_api.reply_message(
@@ -94,17 +94,23 @@ def handle_message(event):
         )
     elif event.message.text == 'タスク一覧':
         #GET
+        url = 'https://04f7bfe9.ngrok.io/tasks/jafkl23kh45l'
+
+        tasks={}
+        req = urllib.request.Request(url)
+        with urllib.request.urlopen(req) as res:
+            tasks = res.read().decode("utf-8")
 
         #一覧メッセージ
         message = [
             TextSendMessage(text='タスク一覧です'),
-
+            TextSendMessage(text=tasks),
         ]
 
         line_bot_api.reply_message(
             event.reply_token,message
         )
-    
+
     else:
         print("not match")
 
