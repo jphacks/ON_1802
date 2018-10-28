@@ -156,7 +156,7 @@ def handle_message(event):
             TextSendMessage(text='タスク一覧です'),
         ]
 
-        if tasks != [] or tasks != False:
+        if tasks != []:
             for task in tasks:
                 message.append(TextSendMessage(text='・' + task['task_name']),)
                 # print('・' + task['task_name'])
