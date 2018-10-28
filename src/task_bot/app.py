@@ -130,18 +130,38 @@ def handle_message(event):
         )
     elif event.message.text == 'タスク一覧':
         #GET
+        # url = 'https://04f7bfe9.ngrok.io/tasks/jafkl23kh45l'
+        #
+        # tasks={}
+        # req = urllib.request.Request(url)
+        # with urllib.request.urlopen(req) as res:
+        #     tasks = res.read().decode("utf-8")
+        #     # print(type(tasks))
+        #
+        # #一覧メッセージ
+        # message = [
+        #     TextSendMessage(text='タスク一覧です'),
+        #     TextSendMessage(text=tasks),
+        # ]
+
         url = 'https://04f7bfe9.ngrok.io/tasks/jafkl23kh45l'
 
-        tasks={}
         req = urllib.request.Request(url)
         with urllib.request.urlopen(req) as res:
-            tasks = res.read().decode("utf-8")
+            data = json.loads(res.read().decode("utf-8"))
 
-        #一覧メッセージ
+        tasks = data['tasks']
+
         message = [
             TextSendMessage(text='タスク一覧です'),
-            TextSendMessage(text=tasks),
         ]
+
+        if tasks != [] or tasks != False:
+            for task in tasks:
+                message.append(TextSendMessage(text='・' + task['task_name']),)
+                # print('・' + task['task_name'])
+        else:
+            message.append(TextSendMessage(text='タスクはありません'))
 
         line_bot_api.reply_message(
             event.reply_token,message
