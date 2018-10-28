@@ -1,6 +1,6 @@
 # タスクくん (Task管理Bot)
 
-[![Product Name](image.png)](https://www.youtube.com/watch?v=G5rULR53uMk)
+[![Product Name](image.png)](https://youtu.be/sgUqqXrB9fQ)
 
 ## 製品概要
 ### Task X Tech（X → 今回皆さんが選定した好きな言葉に書き換えてください）
