@@ -52,15 +52,13 @@ def handle_message(event):
     #     event.reply_token,
     #     TextSendMessage(text=event.message.text))
 
-    addpattern = re.compile(r'(.*)のタスク追加')
-    addmatchObj = addpattern.findall(event.message.text)
+    addObj = re.search(r'(.*)のタスク追加')
 
-    donepattern = re.compile(r'(.*)のタスク完了')
-    donematchObj = donepattern.findall(event.message.text)
+    doneObj = re.search(r'(.*)のタスク完了')
 
     print(event.message.text)
 
-    if addmatchObj:
+    if addObj:
         print("match")
         # POST
         # postjson=json.dumps(
@@ -73,14 +71,14 @@ def handle_message(event):
         # )
         #追加完了メッセージ
         message = [
-            TextSendMessage(text=addmatchObj[0][0] + 'を追加'),
+            TextSendMessage(text=addObj.group(1) + 'を追加'),
             TextSendMessage(text='タスクを追加しました')
         ]
 
         line_bot_api.reply_message(
             event.reply_token,message
         )
-    elif donematchObj:
+    elif doneObj:
         #この処理は省略→#どのタスクを完了するか確認
         #line_bot_api.reply_message(event.reply_token,message=TextSendMessage(text='どのタスクを完了しますか？'))
         
@@ -88,7 +86,7 @@ def handle_message(event):
         
         #追加完了メッセージ
         message = [
-            TextSendMessage(text='洗濯を完了しました')
+            TextSendMessage(text=doneObj.group(1)'を完了しました')
         ]
 
         line_bot_api.reply_message(

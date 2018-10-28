@@ -1,7 +1,7 @@
 import urllib.request, json
 
 if __name__ == '__main__':
-    url = "http://127.0.0.1:5000/tasks/jafkl23kh45l"
+    url = "https://51c55c54.ngrok.io/tasks/jafkl23kh45l"
     method = "POST"
     headers = {"Content-Type" : "application/json"}
 
