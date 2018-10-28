@@ -25,9 +25,10 @@ def data_to_json(dict):
     if os.path.isfile(path + file_name):
         
         exist_tasks = read.json_to_data(dict['user_id'])
-        df = pd.DataFrame(exist_tasks)
+        df = pd.DataFrame(columns=['user_id', 'task_name', 'task_info', 'time_limit'])
+        for task in exist_tasks:
+            df = df.append(task, ignore_index=True)
 #         print(df)
-        
         task_dict = pd.Series(dict)
 #         print(task_dict)
         new_tasks = df.append(task_dict, ignore_index=True)

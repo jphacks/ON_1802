@@ -1,21 +1,26 @@
 import pandas as pd
+import os
 
 def json_to_data(user_id):
 
     path = './data/'
     file_name = str(user_id) + '.json'
-    df = pd.read_json(path + file_name)
+    if os.path.isfile(path + file_name):
+        df = pd.read_json(path + file_name)
 
-#     print(df)
-    
-    user_id = [x for x in df['user_id']]
-    task_name = [x for x in df['task_name']]
-    task_info = [x for x in df['task_info']]
-    time_limit = [x for x in df['time_limit']]
-    
-    task_dict = {'user_id':user_id, 'task_name':task_name, 'task_info':task_info, 'time_limit':time_limit}
-    
-    return task_dict
+        task_list = []
+        for _, task in df.iterrows():
+            user_id = task['user_id']
+            task_name = task['task_name']
+            task_info = task['task_info']
+            time_limit = task['time_limit']
+
+            task_dict = {'user_id':user_id, 'task_name':task_name, 'task_info':task_info, 'time_limit':time_limit}
+
+            task_list.append(task_dict)
+        return task_list
+    else:
+        return False
 
 # this is test
 if __name__ == '__main__':
