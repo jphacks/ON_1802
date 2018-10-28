@@ -2,13 +2,16 @@ import pandas as pd
 
 def json_to_data(user_id):
 
+    path = './data/'
     file_name = str(user_id) + '.json'
-    df = pd.read_json(file_name)
+    df = pd.read_json(path + file_name)
+
+#     print(df)
     
-    user_id = df['user_id'][0]
-    task_name = df['task_name'][0]
-    task_info = df['task_info'][0]
-    time_limit = df['time_limit'][0]
+    user_id = [x for x in df['user_id']]
+    task_name = [x for x in df['task_name']]
+    task_info = [x for x in df['task_info']]
+    time_limit = [x for x in df['time_limit']]
     
     task_dict = {'user_id':user_id, 'task_name':task_name, 'task_info':task_info, 'time_limit':time_limit}
     
