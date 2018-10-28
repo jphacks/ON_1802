@@ -1,27 +1,37 @@
 import pandas as pd
 
-def _change_dict_for_pandas(task_dict):
+# def _change_dict_for_pandas(task_dict):
     
-    for key, data in task_dict.items():
-        task_dict[key] = [data]
+#     for key, data in task_dict.items():
+#         task_dict[key] = [data]
 
-    return task_dict
+#     return task_dict
 
-def data_to_json(dict):
+def data_to_json(task_dict):
+    """
+    task_dict = {
+        'user_id' : [1],
+        'task_name' : ['洗濯物をたたむ'],
+        'task_info' : ['洗濯物が溜まってきたのでそろそろ畳まないといけない'],
+        'time_limit' : [{'year':2018, 'month':10, 'date':18}]
+    }
+    """
 
-    file_name = str(dict['user_id']) + '.json'
-    task_dict = _change_dict_for_pandas(dict)
+    file_name = str(task_dict['user_id'][0]) + '.json'
+#     task_dict = _change_dict_for_pandas(dict)
     df = pd.DataFrame(task_dict)
     df.to_json(file_name)
 
     return 0
 
+
+# test
 if __name__ == '__main__':
     task_dict = {
-        'user_id' : 1,
-        'task_name' : '洗濯物をたたむ',
-        'task_info' : '洗濯物が溜まってきたのでそろそろ畳まないといけない',
-        'time_limit' : {'year':2018, 'month':10, 'date':18}
+        'user_id' : [1],
+        'task_name' : ['洗濯物をたたむ'],
+        'task_info' : ['洗濯物が溜まってきたのでそろそろ畳まないといけない'],
+        'time_limit' : [{'year':2018, 'month':10, 'date':18}]
     }
     
     data_to_json(task_dict)

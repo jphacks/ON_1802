@@ -71,3 +71,25 @@
 [I 08:55:49.770 NotebookApp] Saving file at /learn_pandas_json.ipynb
 [I 08:57:49.859 NotebookApp] Saving file at /learn_pandas_json.ipynb
 [I 08:59:45.883 NotebookApp] Saving file at /practice_pandas.ipynb
+[I 09:01:33.673 NotebookApp] Saving file at /learn_pandas_json.ipynb
+[I 09:01:35.351 NotebookApp] Starting buffering for 21778740-9668-48a7-9dc7-7ba944a62274:ab537a80f44f457f8c8c0e5b0be18204
+[I 09:01:36.346 NotebookApp] Starting buffering for d8427661-9c1f-48b6-8f0d-6e3f2603eaaa:1fb22e6a0c9b44738391bc02a256737d
+[I 09:01:38.002 NotebookApp] Shutting down on /api/shutdown request.
+[I 09:01:38.013 NotebookApp] Shutting down 2 kernels
+[I 09:01:38.647 NotebookApp] Kernel shutdown: d8427661-9c1f-48b6-8f0d-6e3f2603eaaa
+[I 09:01:38.649 NotebookApp] Kernel shutdown: 21778740-9668-48a7-9dc7-7ba944a62274
+[I 09:31:34.788 NotebookApp] The port 8888 is already in use, trying another port.
+[I 09:31:34.801 NotebookApp] Serving notebooks from local directory: /Users/kagari/jphacks/notes
+[I 09:31:34.801 NotebookApp] The Jupyter Notebook is running at:
+[I 09:31:34.801 NotebookApp] http://localhost:8889/?token=9c62dd2f5856765f05e36078543158a8f7586b6d0d182245
+[I 09:31:34.801 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 09:31:34.814 NotebookApp] 
+    
+    Copy/paste this URL into your browser when you connect for the first time,
+    to login with a token:
+        http://localhost:8889/?token=9c62dd2f5856765f05e36078543158a8f7586b6d0d182245
+[I 09:31:35.187 NotebookApp] Accepting one-time-token-authenticated connection from ::1
+[I 09:31:50.315 NotebookApp] Kernel started: 8cc5c18a-594b-40c6-a038-5f083dd8c5b7
+[I 09:31:51.675 NotebookApp] Adapting to protocol v5.1 for kernel 8cc5c18a-594b-40c6-a038-5f083dd8c5b7
+[I 09:43:50.816 NotebookApp] Saving file at /learn_pandas_json.ipynb
+[I 09:45:36.886 NotebookApp] Saving file at /learn_pandas_json.ipynb
