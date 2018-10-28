@@ -20,6 +20,10 @@ YOUR_CHANNEL_SECRET = os.environ["YOUR_CHANNEL_SECRET"]
 line_bot_api = LineBotApi(YOUR_CHANNEL_ACCESS_TOKEN)
 handler = WebhookHandler(YOUR_CHANNEL_SECRET)
 
+@app.route("/")
+def hello_world():
+    return "hello world!"
+
 @app.route("/callback", methods=['POST'])
 def callback():
     # get X-Line-Signature header value
@@ -40,22 +44,22 @@ def callback():
 
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
-    line_bot_api.reply_message(
-        event.reply_token,
-        TextSendMessage(text=event.message.text))
+    # line_bot_api.reply_message(
+    #     event.reply_token,
+    #     TextSendMessage(text=event.message.text))
 
-    if message == 'タスク追加':
+    if event.message.text == 'タスク追加':
+        print ('タスク追加')
         line_bot_api.reply_message(
-        event.reply_token,
-        TextSendMessage(text='タスクを追加しました'))
-    elif message == 'タスク完了':
+            event.reply_token,TextSendMessage(text='タスクを追加しました')
+        )
+    elif event.message.text == 'タスク完了':
         line_bot_api.reply_message(
-        event.reply_token,
-        TextSendMessage(text='タスクを完了しました'))
-    elif message == 'タスク一覧':
-        line_bot_api.reply_message(
-        event.reply_token,
-        TextSendMessage(text='タスク一覧です'))
+            event.reply_token,
+            [
+                TextSendMessage(text = 'タスクを完了しました')
+            ]
+        )
 
 if __name__ == "__main__":
     port = int(os.getenv("PORT", 5000))
